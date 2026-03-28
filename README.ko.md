@@ -1,8 +1,8 @@
 <p align="center">
-  English | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md) | [Español](./README.es.md) | [Deutsch](./README.de.md) | [Français](./README.fr.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md) | [Türkçe](./README.tr.md) | [Русский](./README.ru.md)
+  [English](./README.md) | 한국어
 </p>
 
-# Awesome Suno API: Pricing, Models, Examples, and Integration Guide
+# Awesome Suno API: 가격, 모델, 예제 및 통합 가이드
 
 <p align="center">
   <a href="https://evolink.ai/suno?utm_source=github&utm_medium=banner&utm_campaign=awesome-suno-api">
@@ -37,7 +37,7 @@ curl --request POST \
 
 ## What Is Suno API?
 
-Suno API is an AI music generation API for creating songs, vocals, lyrics-based tracks, and instrumental music from text prompts. Through EvoLink.ai, developers can access Suno music generation with a unified API, transparent pricing, and production-friendly integration.
+이 실전형 저장소는 개발자가 Suno API 가격을 이해하고, 모델을 비교하고, AI 음악 생성을 빠르게 통합할 수 있도록 돕습니다.
 
 This repository is built for developers who want to:
 

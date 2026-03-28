@@ -1,8 +1,8 @@
 <p align="center">
-  English | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md) | [Español](./README.es.md) | [Deutsch](./README.de.md) | [Français](./README.fr.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md) | [Türkçe](./README.tr.md) | [Русский](./README.ru.md)
+  [English](./README.md) | 简体中文
 </p>
 
-# Awesome Suno API: Pricing, Models, Examples, and Integration Guide
+# Awesome Suno API：Pricing、Models、Examples 与 Integration Guide
 
 <p align="center">
   <a href="https://evolink.ai/suno?utm_source=github&utm_medium=banner&utm_campaign=awesome-suno-api">
@@ -11,12 +11,12 @@
 </p>
 
 <p align="center">
-  Compare Suno API pricing, choose the right Suno API model, and integrate AI music generation in one API call.
+  对比 Suno API pricing，选择合适的 Suno API model，并用一次 API 调用接入 AI music generation。
 </p>
 
-## Quick Start: One-Line Suno API Integration
+## Quick Start：一行代码接入 Suno API
 
-Use Suno API in one API call.
+用一次 API 调用接入 Suno API。
 
 ```bash
 curl --request POST \
@@ -35,9 +35,9 @@ curl --request POST \
   <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation">Read API Docs</a>
 </p>
 
-## What Is Suno API?
+## 什么是 Suno API？
 
-Suno API is an AI music generation API for creating songs, vocals, lyrics-based tracks, and instrumental music from text prompts. Through EvoLink.ai, developers can access Suno music generation with a unified API, transparent pricing, and production-friendly integration.
+这是一个面向开发者的 Suno API 实战仓库，帮助你理解 pricing、比较 model，并快速接入 AI music generation。
 
 This repository is built for developers who want to:
 
@@ -119,7 +119,7 @@ Use this comparison table to choose the best Suno API model for your app.
 | compatibility with older integrations | `suno-v4.5plus-beta` / `suno-v4.5all-beta` | smoother migration path |
 | a safe default for production | `suno-v4.5-beta` | good mix of quality, cost, and compatibility |
 
-## How to Use Suno API
+## 如何使用 Suno API
 
 Using Suno API usually involves four steps:
 
@@ -130,7 +130,7 @@ Using Suno API usually involves four steps:
 
 Suno music generation is asynchronous. The create request returns a task ID, and you fetch the completed audio result afterward.
 
-## Request Modes
+## 请求模式
 
 ### Simple mode
 Use simple mode when you want the model to generate the song structure automatically.
@@ -169,7 +169,7 @@ If you want instrumental output, set `instrumental` to `true`.
 }
 ```
 
-## Task Workflow
+## 任务流程
 
 ### 1. Create a generation task
 
@@ -230,7 +230,7 @@ Example completed response:
 }
 ```
 
-## Important Parameters
+## 重要参数
 
 | Parameter | Type | What it does |
 |---|---|---|
@@ -243,7 +243,7 @@ Example completed response:
 | `negative_tags` | string | styles or qualities to avoid |
 | `persona_id` | string | reuses a previously created Suno persona |
 
-## Model Name Compatibility
+## Model 名称兼容性
 
 Older model names are still supported and mapped automatically to beta variants.
 
@@ -255,7 +255,7 @@ Older model names are still supported and mapped automatically to beta variants.
 | `suno-v4.5all` | `suno-v4.5all-beta` |
 | `suno-v4` | `suno-v4-beta` |
 
-## More Suno API Examples by Language
+## 更多语言的 Suno API 示例
 
 - [Python Example](#suno-api-example-in-python)
 - [JavaScript Example](#suno-api-example-in-javascript)
@@ -362,7 +362,7 @@ func main() {
 }
 ```
 
-## Best Prompts for Suno API
+## Suno API Prompt 最佳实践
 
 For better Suno API output, prompts should describe:
 
@@ -381,7 +381,7 @@ A dreamy indie pop song with soft female vocals, warm analog synths, gentle drum
 
 If you are writing lyrics, structure them with tags like `[Verse]`, `[Chorus]`, and `[Bridge]`.
 
-## Common Use Cases
+## 常见使用场景
 
 Suno API can be used for:
 
@@ -414,7 +414,7 @@ Yes. Set `instrumental` to `true`, typically in `custom_mode`.
 ### Can I use lyrics with Suno API?
 Yes. In custom mode, the `prompt` field can be used as lyrics input.
 
-## Related Links
+## 相关链接
 
 - [Suno API Pricing](https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
 - [Get API Key](https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
