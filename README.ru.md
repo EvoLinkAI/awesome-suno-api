@@ -1,5 +1,5 @@
 <p align="center">
-  [English](./README.md) | Русский
+  [English](./README.md) | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md) | [Español](./README.es.md) | [Deutsch](./README.de.md) | [Français](./README.fr.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md) | [Türkçe](./README.tr.md) | Русский
 </p>
 
 # Awesome Suno API: цены, модели, примеры и руководство по интеграции
