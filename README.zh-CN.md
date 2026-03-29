@@ -1,6 +1,6 @@
 [English](./README.md) | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md) | [Español](./README.es.md) | [Deutsch](./README.de.md) | [Français](./README.fr.md) | [日本語](./README.ja.md) | [한국어](./README.ko.md) | [Türkçe](./README.tr.md) | [Русский](./README.ru.md)
 
-# Awesome Suno API：Pricing、Models、Examples 与 Integration Guide
+# Awesome Suno API：定价、模型、示例与集成指南
 
 <p align="center">
   <a href="https://evolink.ai/suno?utm_source=github&utm_medium=banner&utm_campaign=awesome-suno-api">
@@ -8,9 +8,7 @@
   </a>
 </p>
 
-<p align="center">
-  对比 Suno API pricing，选择合适的 Suno API model，并用一次 API 调用接入 AI music generation。
-</p>
+这是一个面向开发者的 Suno API 实战仓库，帮助你看懂 Suno API pricing、比较不同 model，并用一次 API 调用快速接入 AI music generation。
 
 ## Quick Start：一行代码接入 Suno API
 
@@ -28,110 +26,110 @@ curl --request POST \
 ```
 
 <p align="left">
-  <a href="https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">View Suno API Pricing</a> ·
-  <a href="https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Get API Key</a> ·
-  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation">Read API Docs</a>
+  <a href="https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">查看 Suno API Pricing</a> ·
+  <a href="https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">获取 API Key</a> ·
+  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation">阅读 API 文档</a>
 </p>
 
 ## 什么是 Suno API？
 
-这是一个面向开发者的 Suno API 实战仓库，帮助你理解 pricing、比较 model，并快速接入 AI music generation。
+Suno API 是一个 AI 音乐生成 API，可根据文本 prompt 生成歌曲、人声、基于歌词的音乐以及纯伴奏。通过 EvoLink.ai，开发者可以使用统一 API、透明 pricing 和适合生产环境的接入方式来调用 Suno music generation。
 
-This repository is built for developers who want to:
+这个仓库主要帮助开发者：
 
-- understand Suno API pricing
-- compare Suno API models
-- choose the best Suno API model for quality, speed, or cost
-- integrate Suno API into real-world music apps, creator tools, and AI workflows
+- 理解 Suno API pricing
+- 比较不同 Suno API models
+- 根据质量、速度和成本选择合适的 model
+- 把 Suno API 集成到音乐应用、creator tools 和 AI workflows 中
 
 ## Suno API Pricing
 
-This section explains Suno API pricing and the current cost of each supported model on EvoLink.ai.
+这一节解释 Suno API pricing，以及 EvoLink.ai 当前支持的各个 model 的价格。
 
-| Model | Price | Best For | Notes |
+| Model | 价格 | 适合场景 | 说明 |
 |---|---:|---|---|
-| `suno-v5-beta` | $0.1111 / song | highest quality generations | best overall music quality |
-| `suno-v4.5-beta` | $0.0833 / song | balanced quality and cost | strong default choice |
-| `suno-v4.5plus-beta` | $0.0833 / song | balanced generation with broader compatibility | supports older integrations |
-| `suno-v4.5all-beta` | $0.0833 / song | broad compatibility workflows | legacy naming compatibility |
-| `suno-v4-beta` | $0.0556 / song | lower-cost generation | budget-friendly option |
+| `suno-v5-beta` | $0.1111 / song | 最高质量生成 | 当前整体效果最好 |
+| `suno-v4.5-beta` | $0.0833 / song | 质量与成本平衡 | 大多数场景的默认推荐 |
+| `suno-v4.5plus-beta` | $0.0833 / song | 兼容旧集成 | 适合迁移老版本接入 |
+| `suno-v4.5all-beta` | $0.0833 / song | 广泛兼容工作流 | 更适合 legacy naming 兼容 |
+| `suno-v4-beta` | $0.0556 / song | 更低成本生成 | 预算敏感场景更合适 |
 
-> Pricing should match the latest Suno product page on EvoLink.ai. If pricing changes, update this table first.
+> 这里的价格应与 EvoLink.ai 的 Suno 产品页保持一致。如果 pricing 变动，优先更新这一张表。
 
 ## Suno API Models
 
 ### `suno-v5-beta`
-- **Best for:** highest quality song generation
-- **Price:** $0.1111 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** polished demos, creator apps, premium music generation workflows
+- **Best for：** 最高质量的歌曲生成
+- **Price：** $0.1111 / song
+- **Quality：** 高
+- **Speed：** 中等
+- **Supports vocals：** 是
+- **Supports instrumental：** 是
+- **Ideal use cases：** 精修 demo、creator apps、高质量音乐生成工作流
 
 ### `suno-v4.5-beta`
-- **Best for:** strong quality-to-cost balance
-- **Price:** $0.0833 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** most production apps, iteration with good output quality
+- **Best for：** 质量与成本的平衡
+- **Price：** $0.0833 / song
+- **Quality：** 高
+- **Speed：** 中等
+- **Supports vocals：** 是
+- **Supports instrumental：** 是
+- **Ideal use cases：** 大多数生产环境应用、兼顾质量与成本的生成需求
 
 ### `suno-v4.5plus-beta`
-- **Best for:** compatibility with older integrations
-- **Price:** $0.0833 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** teams migrating older Suno integrations to EvoLink.ai
+- **Best for：** 兼容旧版本集成
+- **Price：** $0.0833 / song
+- **Quality：** 高
+- **Speed：** 中等
+- **Supports vocals：** 是
+- **Supports instrumental：** 是
+- **Ideal use cases：** 团队从旧 Suno 集成迁移到 EvoLink.ai
 
 ### `suno-v4.5all-beta`
-- **Best for:** broad compatibility workflows
-- **Price:** $0.0833 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** legacy integration paths and migration scenarios
+- **Best for：** 更广泛的兼容性工作流
+- **Price：** $0.0833 / song
+- **Quality：** 高
+- **Speed：** 中等
+- **Supports vocals：** 是
+- **Supports instrumental：** 是
+- **Ideal use cases：** legacy integration path 和兼容迁移场景
 
 ### `suno-v4-beta`
-- **Best for:** lower-cost music generation
-- **Price:** $0.0556 / song
-- **Quality:** medium
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** prototyping, budget-sensitive apps, batch generation experiments
+- **Best for：** 更低成本的音乐生成
+- **Price：** $0.0556 / song
+- **Quality：** 中
+- **Speed：** 中等
+- **Supports vocals：** 是
+- **Supports instrumental：** 是
+- **Ideal use cases：** 原型验证、预算敏感应用、批量实验
 
 ## Suno API Model Comparison
 
-Use this comparison table to choose the best Suno API model for your app.
+用这张对比表快速选择适合你应用的 Suno API model。
 
-| If you need... | Recommended Model | Why |
+| 如果你需要…… | 推荐 Model | 原因 |
 |---|---|---|
-| the best music quality | `suno-v5-beta` | highest-end model in the current lineup |
-| the best balance of quality and price | `suno-v4.5-beta` | strong default choice for most apps |
-| the lowest Suno API cost | `suno-v4-beta` | cheaper per-song pricing |
-| compatibility with older integrations | `suno-v4.5plus-beta` / `suno-v4.5all-beta` | smoother migration path |
-| a safe default for production | `suno-v4.5-beta` | good mix of quality, cost, and compatibility |
+| 最高音乐质量 | `suno-v5-beta` | 当前系列里最高规格 |
+| 最佳性价比 | `suno-v4.5-beta` | 质量、成本、稳定性比较均衡 |
+| 最低 Suno API cost | `suno-v4-beta` | 单次生成价格更低 |
+| 兼容旧版本接入 | `suno-v4.5plus-beta` / `suno-v4.5all-beta` | 迁移更平滑 |
+| 稳妥的生产默认选项 | `suno-v4.5-beta` | 质量、价格、兼容性都比较均衡 |
 
 ## 如何使用 Suno API
 
-Using Suno API usually involves four steps:
+使用 Suno API 通常分四步：
 
-1. Get an API key from EvoLink.ai
-2. Choose the right Suno API model
-3. Send a generation request to `POST /v1/audios/generations`
-4. Poll task status from `GET /v1/tasks/{task_id}` until the result is ready
+1. 在 EvoLink.ai 获取 API key
+2. 选择合适的 Suno API model
+3. 向 `POST /v1/audios/generations` 发送生成请求
+4. 通过 `GET /v1/tasks/{task_id}` 轮询任务状态，直到拿到结果
 
-Suno music generation is asynchronous. The create request returns a task ID, and you fetch the completed audio result afterward.
+Suno music generation 是异步的。创建请求会先返回 task ID，之后再获取完成后的音频结果。
 
 ## 请求模式
 
 ### Simple mode
-Use simple mode when you want the model to generate the song structure automatically.
+如果你希望模型自动生成歌曲结构，可以使用 simple mode。
 
 ```json
 {
@@ -141,7 +139,7 @@ Use simple mode when you want the model to generate the song structure automatic
 ```
 
 ### Custom mode
-Use custom mode when you want more control over title, style, lyrics, or instrumental output.
+如果你希望控制 title、style、lyrics 或 instrumental output，可以使用 custom mode。
 
 ```json
 {
@@ -155,7 +153,7 @@ Use custom mode when you want more control over title, style, lyrics, or instrum
 ```
 
 ### Instrumental generation
-If you want instrumental output, set `instrumental` to `true`.
+如果你只想生成纯伴奏，把 `instrumental` 设置为 `true`。
 
 ```json
 {
@@ -169,7 +167,7 @@ If you want instrumental output, set `instrumental` to `true`.
 
 ## 任务流程
 
-### 1. Create a generation task
+### 1. 创建生成任务
 
 ```bash
 curl --request POST \
@@ -182,7 +180,7 @@ curl --request POST \
   }'
 ```
 
-Example response:
+示例响应：
 
 ```json
 {
@@ -196,7 +194,7 @@ Example response:
 }
 ```
 
-### 2. Query task status
+### 2. 查询任务状态
 
 ```bash
 curl --request GET \
@@ -204,7 +202,7 @@ curl --request GET \
   --header 'Authorization: Bearer YOUR_API_KEY'
 ```
 
-Example completed response:
+完成后的响应示例：
 
 ```json
 {
@@ -230,22 +228,22 @@ Example completed response:
 
 ## 重要参数
 
-| Parameter | Type | What it does |
+| 参数 | 类型 | 作用 |
 |---|---|---|
-| `model` | string | selects the Suno API model |
-| `prompt` | string | prompt or lyrics input |
-| `custom_mode` | boolean | enables fine-grained control |
-| `instrumental` | boolean | generates instrumental-only output |
-| `title` | string | song title in custom mode |
-| `style` | string | style or genre guidance |
-| `negative_tags` | string | styles or qualities to avoid |
-| `persona_id` | string | reuses a previously created Suno persona |
+| `model` | string | 选择 Suno API model |
+| `prompt` | string | prompt 或 lyrics 输入 |
+| `custom_mode` | boolean | 开启精细控制模式 |
+| `instrumental` | boolean | 生成纯伴奏结果 |
+| `title` | string | custom mode 下的歌曲标题 |
+| `style` | string | 风格或流派描述 |
+| `negative_tags` | string | 指定不想要的风格或特征 |
+| `persona_id` | string | 复用之前创建的 Suno persona |
 
 ## Model 名称兼容性
 
-Older model names are still supported and mapped automatically to beta variants.
+旧版 model 名称仍然可用，会自动映射到对应的 beta 版本。
 
-| Older Name | Current Compatible Variant |
+| 旧名称 | 当前兼容版本 |
 |---|---|
 | `suno-v5` | `suno-v5-beta` |
 | `suno-v4.5` | `suno-v4.5-beta` |
@@ -362,7 +360,7 @@ func main() {
 
 ## Suno API Prompt 最佳实践
 
-For better Suno API output, prompts should describe:
+为了获得更好的 Suno API 输出，prompt 里建议描述清楚：
 
 - genre
 - mood
@@ -371,46 +369,46 @@ For better Suno API output, prompts should describe:
 - tempo
 - production feel
 
-Example prompt:
+示例 prompt：
 
 ```text
 A dreamy indie pop song with soft female vocals, warm analog synths, gentle drums, and an emotional cinematic chorus
 ```
 
-If you are writing lyrics, structure them with tags like `[Verse]`, `[Chorus]`, and `[Bridge]`.
+如果你在写歌词，建议用 `[Verse]`、`[Chorus]`、`[Bridge]` 这样的标签来组织结构。
 
 ## 常见使用场景
 
-Suno API can be used for:
+Suno API 适合用于：
 
-- AI music apps
+- AI 音乐应用
 - creator tools
 - lyric-to-song workflows
-- social video background music
-- game prototypes
-- podcast intros and outros
-- branded content generation
-- AI content automation pipelines
+- 短视频背景音乐
+- 游戏原型
+- podcast 片头和片尾
+- 品牌内容生成
+- AI 内容自动化流程
 
 ## FAQ
 
-### What is Suno API?
-Suno API is an AI music generation API for creating songs, vocals, and instrumentals from prompts or lyrics.
+### 什么是 Suno API？
+Suno API 是一个 AI music generation API，可根据 prompt 或歌词生成歌曲、人声和纯伴奏。
 
-### How much does Suno API cost?
-Current Suno API pricing on EvoLink.ai ranges from $0.0556 to $0.1111 per song depending on the model.
+### Suno API 多少钱？
+当前 EvoLink.ai 上的 Suno API pricing 按不同 model 计算，范围是每首歌 $0.0556 到 $0.1111。
 
-### Which Suno API model is best?
-If you want the highest quality, use `suno-v5-beta`. If you want better cost efficiency, use `suno-v4.5-beta` or `suno-v4-beta`.
+### 哪个 Suno API model 最好？
+如果你追求最高质量，用 `suno-v5-beta`；如果更看重性价比，可以优先考虑 `suno-v4.5-beta` 或 `suno-v4-beta`。
 
-### Is Suno API synchronous?
-No. Suno API generation is asynchronous. You create a task first, then query task status via `GET /v1/tasks/{task_id}`.
+### Suno API 是同步的吗？
+不是。Suno API 采用异步生成流程：先创建 task，再通过 `GET /v1/tasks/{task_id}` 查询状态。
 
-### Can I generate instrumental music with Suno API?
-Yes. Set `instrumental` to `true`, typically in `custom_mode`.
+### Suno API 可以生成纯伴奏吗？
+可以。把 `instrumental` 设置为 `true` 即可，通常和 `custom_mode` 一起使用。
 
-### Can I use lyrics with Suno API?
-Yes. In custom mode, the `prompt` field can be used as lyrics input.
+### Suno API 可以直接用歌词吗？
+可以。在 custom mode 下，`prompt` 字段可以直接作为 lyrics 输入。
 
 ## 相关链接
 

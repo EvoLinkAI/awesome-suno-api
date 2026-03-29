@@ -8,13 +8,11 @@
   </a>
 </p>
 
-<p align="center">
-  Compare Suno API pricing, choose the right Suno API model, and integrate AI music generation in one API call.
-</p>
+Bu pratik depo, geliştiricilerin Suno API fiyatlandırmasını anlamasına, modelleri karşılaştırmasına ve AI music generation’ı tek bir API çağrısıyla entegre etmesine yardımcı olur.
 
-## Quick Start: One-Line Suno API Integration
+## Quick Start: Suno API’yi tek API çağrısıyla entegre et
 
-Use Suno API in one API call.
+Suno API’yi tek bir API çağrısıyla kullanın.
 
 ```bash
 curl --request POST \
@@ -28,110 +26,110 @@ curl --request POST \
 ```
 
 <p align="left">
-  <a href="https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">View Suno API Pricing</a> ·
-  <a href="https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Get API Key</a> ·
-  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation">Read API Docs</a>
+  <a href="https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Suno API fiyatlarını görüntüle</a> ·
+  <a href="https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">API Key al</a> ·
+  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation">API dokümanını oku</a>
 </p>
 
-## What Is Suno API?
+## Suno API nedir?
 
-Bu pratik depo, geliştiricilerin Suno API fiyatlandırmasını anlamasına, modelleri karşılaştırmasına ve yapay zekâ müzik üretimini hızlıca entegre etmesine yardımcı olur.
+Suno API, metin prompt’larından şarkılar, vocals, lyrics tabanlı parçalar ve instrumental music üretmek için kullanılan bir yapay zekâ müzik üretim API’sidir. EvoLink.ai üzerinden geliştiriciler, birleşik bir API, şeffaf pricing ve production-ready entegrasyon ile Suno music generation’a erişebilir.
 
-This repository is built for developers who want to:
+Bu depo şu geliştiriciler için hazırlandı:
 
-- understand Suno API pricing
-- compare Suno API models
-- choose the best Suno API model for quality, speed, or cost
-- integrate Suno API into real-world music apps, creator tools, and AI workflows
+- Suno API pricing’i anlamak isteyenler
+- Suno API models karşılaştırmak isteyenler
+- kalite, hız veya maliyete göre en iyi model’i seçmek isteyenler
+- Suno API’yi müzik uygulamalarına, creator tools ve AI workflows içine entegre etmek isteyenler
 
 ## Suno API Pricing
 
-This section explains Suno API pricing and the current cost of each supported model on EvoLink.ai.
+Bu bölüm Suno API pricing’i ve EvoLink.ai üzerinde desteklenen her model’in güncel maliyetini açıklar.
 
-| Model | Price | Best For | Notes |
+| Model | Fiyat | En iyi kullanım | Notlar |
 |---|---:|---|---|
-| `suno-v5-beta` | $0.1111 / song | highest quality generations | best overall music quality |
-| `suno-v4.5-beta` | $0.0833 / song | balanced quality and cost | strong default choice |
-| `suno-v4.5plus-beta` | $0.0833 / song | balanced generation with broader compatibility | supports older integrations |
-| `suno-v4.5all-beta` | $0.0833 / song | broad compatibility workflows | legacy naming compatibility |
-| `suno-v4-beta` | $0.0556 / song | lower-cost generation | budget-friendly option |
+| `suno-v5-beta` | $0.1111 / song | en yüksek kaliteli üretim | genel kalite olarak en güçlü seçenek |
+| `suno-v4.5-beta` | $0.0833 / song | kalite ve maliyet dengesi | varsayılan önerilen seçenek |
+| `suno-v4.5plus-beta` | $0.0833 / song | eski entegrasyonlarla uyumluluk | geçiş senaryoları için uygun |
+| `suno-v4.5all-beta` | $0.0833 / song | geniş uyumluluk gerektiren iş akışları | legacy naming için uygun |
+| `suno-v4-beta` | $0.0556 / song | daha düşük maliyetli üretim | bütçe dostu seçenek |
 
-> Pricing should match the latest Suno product page on EvoLink.ai. If pricing changes, update this table first.
+> Fiyatlar her zaman EvoLink.ai üzerindeki en güncel Suno ürün sayfasıyla eşleşmelidir. Pricing değişirse önce bu tabloyu güncelleyin.
 
 ## Suno API Models
 
 ### `suno-v5-beta`
-- **Best for:** highest quality song generation
+- **Best for:** en yüksek kaliteli şarkı üretimi
 - **Price:** $0.1111 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** polished demos, creator apps, premium music generation workflows
+- **Quality:** yüksek
+- **Speed:** orta
+- **Supports vocals:** evet
+- **Supports instrumental:** evet
+- **Ideal use cases:** yüksek kaliteli demolar, creator apps, premium müzik üretim iş akışları
 
 ### `suno-v4.5-beta`
-- **Best for:** strong quality-to-cost balance
+- **Best for:** kalite ve maliyet dengesi
 - **Price:** $0.0833 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** most production apps, iteration with good output quality
+- **Quality:** yüksek
+- **Speed:** orta
+- **Supports vocals:** evet
+- **Supports instrumental:** evet
+- **Ideal use cases:** çoğu production uygulaması, iyi kalite ile verimli maliyet dengesi
 
 ### `suno-v4.5plus-beta`
-- **Best for:** compatibility with older integrations
+- **Best for:** eski entegrasyonlarla uyumluluk
 - **Price:** $0.0833 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** teams migrating older Suno integrations to EvoLink.ai
+- **Quality:** yüksek
+- **Speed:** orta
+- **Supports vocals:** evet
+- **Supports instrumental:** evet
+- **Ideal use cases:** eski Suno entegrasyonlarını EvoLink.ai’ye taşıyan ekipler
 
 ### `suno-v4.5all-beta`
-- **Best for:** broad compatibility workflows
+- **Best for:** geniş uyumluluk isteyen iş akışları
 - **Price:** $0.0833 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** legacy integration paths and migration scenarios
+- **Quality:** yüksek
+- **Speed:** orta
+- **Supports vocals:** evet
+- **Supports instrumental:** evet
+- **Ideal use cases:** legacy integration path ve geçiş senaryoları
 
 ### `suno-v4-beta`
-- **Best for:** lower-cost music generation
+- **Best for:** daha düşük maliyetli müzik üretimi
 - **Price:** $0.0556 / song
-- **Quality:** medium
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** prototyping, budget-sensitive apps, batch generation experiments
+- **Quality:** orta
+- **Speed:** orta
+- **Supports vocals:** evet
+- **Supports instrumental:** evet
+- **Ideal use cases:** prototipleme, bütçe hassasiyetine sahip uygulamalar, toplu deneyler
 
 ## Suno API Model Comparison
 
-Use this comparison table to choose the best Suno API model for your app.
+Uygulamanız için en uygun Suno API model’ini seçmek için bu karşılaştırma tablosunu kullanın.
 
-| If you need... | Recommended Model | Why |
+| İhtiyacınız varsa... | Önerilen Model | Neden |
 |---|---|---|
-| the best music quality | `suno-v5-beta` | highest-end model in the current lineup |
-| the best balance of quality and price | `suno-v4.5-beta` | strong default choice for most apps |
-| the lowest Suno API cost | `suno-v4-beta` | cheaper per-song pricing |
-| compatibility with older integrations | `suno-v4.5plus-beta` / `suno-v4.5all-beta` | smoother migration path |
-| a safe default for production | `suno-v4.5-beta` | good mix of quality, cost, and compatibility |
+| en yüksek müzik kalitesi | `suno-v5-beta` | mevcut serinin en güçlü modeli |
+| kalite ve fiyat dengesi | `suno-v4.5-beta` | çoğu uygulama için güçlü varsayılan seçim |
+| en düşük Suno API maliyeti | `suno-v4-beta` | song başına daha düşük fiyat |
+| eski entegrasyonlarla uyumluluk | `suno-v4.5plus-beta` / `suno-v4.5all-beta` | geçiş daha kolay olur |
+| production için güvenli varsayılan seçenek | `suno-v4.5-beta` | kalite, maliyet ve uyumluluk dengesi iyi |
 
-## How to Use Suno API
+## Suno API nasıl kullanılır?
 
-Using Suno API usually involves four steps:
+Suno API kullanımı genellikle dört adım içerir:
 
-1. Get an API key from EvoLink.ai
-2. Choose the right Suno API model
-3. Send a generation request to `POST /v1/audios/generations`
-4. Poll task status from `GET /v1/tasks/{task_id}` until the result is ready
+1. EvoLink.ai üzerinden bir API key almak
+2. Doğru Suno API model’ini seçmek
+3. `POST /v1/audios/generations` endpoint’ine üretim isteği göndermek
+4. Sonuç hazır olana kadar `GET /v1/tasks/{task_id}` ile görev durumunu sorgulamak
 
-Suno music generation is asynchronous. The create request returns a task ID, and you fetch the completed audio result afterward.
+Suno music generation asenkron çalışır. Create request önce bir task ID döndürür, ardından tamamlanan ses sonucu alınır.
 
-## Request Modes
+## İstek modları
 
 ### Simple mode
-Use simple mode when you want the model to generate the song structure automatically.
+Şarkı yapısının model tarafından otomatik oluşturulmasını istiyorsanız simple mode kullanın.
 
 ```json
 {
@@ -141,7 +139,7 @@ Use simple mode when you want the model to generate the song structure automatic
 ```
 
 ### Custom mode
-Use custom mode when you want more control over title, style, lyrics, or instrumental output.
+title, style, lyrics veya instrumental output üzerinde daha fazla kontrol istiyorsanız custom mode kullanın.
 
 ```json
 {
@@ -155,7 +153,7 @@ Use custom mode when you want more control over title, style, lyrics, or instrum
 ```
 
 ### Instrumental generation
-If you want instrumental output, set `instrumental` to `true`.
+Instrumental çıktı istiyorsanız `instrumental` alanını `true` yapın.
 
 ```json
 {
@@ -167,9 +165,9 @@ If you want instrumental output, set `instrumental` to `true`.
 }
 ```
 
-## Task Workflow
+## Görev iş akışı
 
-### 1. Create a generation task
+### 1. Bir üretim görevi oluşturun
 
 ```bash
 curl --request POST \
@@ -182,7 +180,7 @@ curl --request POST \
   }'
 ```
 
-Example response:
+Örnek yanıt:
 
 ```json
 {
@@ -196,7 +194,7 @@ Example response:
 }
 ```
 
-### 2. Query task status
+### 2. Görev durumunu sorgulayın
 
 ```bash
 curl --request GET \
@@ -204,7 +202,7 @@ curl --request GET \
   --header 'Authorization: Bearer YOUR_API_KEY'
 ```
 
-Example completed response:
+Tamamlanmış yanıt örneği:
 
 ```json
 {
@@ -228,24 +226,24 @@ Example completed response:
 }
 ```
 
-## Important Parameters
+## Önemli parametreler
 
-| Parameter | Type | What it does |
+| Parametre | Tür | Ne işe yarar |
 |---|---|---|
-| `model` | string | selects the Suno API model |
-| `prompt` | string | prompt or lyrics input |
-| `custom_mode` | boolean | enables fine-grained control |
-| `instrumental` | boolean | generates instrumental-only output |
-| `title` | string | song title in custom mode |
-| `style` | string | style or genre guidance |
-| `negative_tags` | string | styles or qualities to avoid |
-| `persona_id` | string | reuses a previously created Suno persona |
+| `model` | string | Suno API model’ini seçer |
+| `prompt` | string | prompt veya lyrics girdisi |
+| `custom_mode` | boolean | ayrıntılı kontrolü etkinleştirir |
+| `instrumental` | boolean | yalnızca instrumental çıktı üretir |
+| `title` | string | custom mode için şarkı başlığı |
+| `style` | string | tarz veya tür yönlendirmesi |
+| `negative_tags` | string | kaçınılması gereken stiller veya özellikler |
+| `persona_id` | string | daha önce oluşturulmuş Suno persona’yı yeniden kullanır |
 
-## Model Name Compatibility
+## Model adı uyumluluğu
 
-Older model names are still supported and mapped automatically to beta variants.
+Eski model adları hâlâ desteklenir ve otomatik olarak ilgili beta varyantlarına eşlenir.
 
-| Older Name | Current Compatible Variant |
+| Eski ad | Güncel uyumlu varyant |
 |---|---|
 | `suno-v5` | `suno-v5-beta` |
 | `suno-v4.5` | `suno-v4.5-beta` |
@@ -253,7 +251,7 @@ Older model names are still supported and mapped automatically to beta variants.
 | `suno-v4.5all` | `suno-v4.5all-beta` |
 | `suno-v4` | `suno-v4-beta` |
 
-## More Suno API Examples by Language
+## Dil bazlı daha fazla Suno API örneği
 
 - [Python Example](#suno-api-example-in-python)
 - [JavaScript Example](#suno-api-example-in-javascript)
@@ -360,9 +358,9 @@ func main() {
 }
 ```
 
-## Best Prompts for Suno API
+## Suno API için en iyi prompt’lar
 
-For better Suno API output, prompts should describe:
+Daha iyi Suno API sonuçları almak için prompt içinde şunları tanımlayın:
 
 - genre
 - mood
@@ -371,48 +369,48 @@ For better Suno API output, prompts should describe:
 - tempo
 - production feel
 
-Example prompt:
+Örnek prompt:
 
 ```text
 A dreamy indie pop song with soft female vocals, warm analog synths, gentle drums, and an emotional cinematic chorus
 ```
 
-If you are writing lyrics, structure them with tags like `[Verse]`, `[Chorus]`, and `[Bridge]`.
+lyrics yazıyorsanız yapıyı düzenlemek için `[Verse]`, `[Chorus]` ve `[Bridge]` gibi etiketler kullanın.
 
-## Common Use Cases
+## Yaygın kullanım senaryoları
 
-Suno API can be used for:
+Suno API şu alanlarda kullanılabilir:
 
-- AI music apps
+- AI müzik uygulamaları
 - creator tools
 - lyric-to-song workflows
-- social video background music
-- game prototypes
-- podcast intros and outros
-- branded content generation
-- AI content automation pipelines
+- sosyal video arka plan müziği
+- oyun prototipleri
+- podcast intro / outro üretimi
+- marka içerik üretimi
+- AI içerik otomasyon pipeline’ları
 
 ## FAQ
 
-### What is Suno API?
-Suno API is an AI music generation API for creating songs, vocals, and instrumentals from prompts or lyrics.
+### Suno API nedir?
+Suno API, prompt veya lyrics girdilerinden şarkılar, vocals ve instrumentaller üreten bir AI music generation API’sidir.
 
-### How much does Suno API cost?
-Current Suno API pricing on EvoLink.ai ranges from $0.0556 to $0.1111 per song depending on the model.
+### Suno API ne kadar tutuyor?
+Şu anda EvoLink.ai üzerindeki Suno API pricing, modele göre song başına $0.0556 ile $0.1111 arasında değişmektedir.
 
-### Which Suno API model is best?
-If you want the highest quality, use `suno-v5-beta`. If you want better cost efficiency, use `suno-v4.5-beta` or `suno-v4-beta`.
+### En iyi Suno API model’i hangisi?
+En yüksek kaliteyi istiyorsanız `suno-v5-beta` kullanın. Daha iyi maliyet verimliliği istiyorsanız `suno-v4.5-beta` veya `suno-v4-beta` kullanın.
 
-### Is Suno API synchronous?
-No. Suno API generation is asynchronous. You create a task first, then query task status via `GET /v1/tasks/{task_id}`.
+### Suno API senkron mu?
+Hayır. Suno API üretimi asenkrondur. Önce bir task oluşturur, sonra durumu `GET /v1/tasks/{task_id}` ile sorgularsınız.
 
-### Can I generate instrumental music with Suno API?
-Yes. Set `instrumental` to `true`, typically in `custom_mode`.
+### Suno API ile instrumental music üretebilir miyim?
+Evet. `instrumental` alanını `true` olarak ayarlayın; genellikle `custom_mode` ile birlikte kullanılır.
 
-### Can I use lyrics with Suno API?
-Yes. In custom mode, the `prompt` field can be used as lyrics input.
+### Suno API ile lyrics kullanabilir miyim?
+Evet. custom mode içinde `prompt` alanı lyrics girdisi olarak kullanılabilir.
 
-## Related Links
+## İlgili bağlantılar
 
 - [Suno API Pricing](https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
 - [Get API Key](https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)

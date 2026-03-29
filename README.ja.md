@@ -8,13 +8,11 @@
   </a>
 </p>
 
-<p align="center">
-  Compare Suno API pricing, choose the right Suno API model, and integrate AI music generation in one API call.
-</p>
+この実践向けリポジトリは、開発者が Suno API pricing を理解し、model を比較し、1 回の API 呼び出しで AI music generation を導入できるようにするためのものです。
 
-## Quick Start: One-Line Suno API Integration
+## Quick Start: 1 回の API 呼び出しで Suno API を導入
 
-Use Suno API in one API call.
+1 回の API 呼び出しで Suno API を使えます。
 
 ```bash
 curl --request POST \
@@ -28,110 +26,110 @@ curl --request POST \
 ```
 
 <p align="left">
-  <a href="https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">View Suno API Pricing</a> ·
-  <a href="https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Get API Key</a> ·
-  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation">Read API Docs</a>
+  <a href="https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Suno API Pricing を見る</a> ·
+  <a href="https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">API Key を取得</a> ·
+  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation">API ドキュメントを読む</a>
 </p>
 
-## What Is Suno API?
+## Suno API とは？
 
-この実践向けリポジトリは、開発者が Suno API の価格を理解し、モデルを比較し、AI 音楽生成をすばやく統合するのに役立ちます。
+Suno API は、テキスト prompt から楽曲、ボーカル、lyrics ベースのトラック、instrumental music を生成できる AI 音楽生成 API です。EvoLink.ai を通じて、開発者は統一 API、透明な pricing、本番向けの統合方法で Suno music generation を利用できます。
 
-This repository is built for developers who want to:
+このリポジトリは次のような開発者向けです。
 
-- understand Suno API pricing
-- compare Suno API models
-- choose the best Suno API model for quality, speed, or cost
-- integrate Suno API into real-world music apps, creator tools, and AI workflows
+- Suno API pricing を理解したい
+- Suno API models を比較したい
+- 品質、速度、コストに応じて最適な model を選びたい
+- 音楽アプリ、creator tools、AI workflows に Suno API を統合したい
 
 ## Suno API Pricing
 
-This section explains Suno API pricing and the current cost of each supported model on EvoLink.ai.
+このセクションでは、Suno API pricing と EvoLink.ai で利用できる各 model の現在価格を説明します。
 
-| Model | Price | Best For | Notes |
+| Model | 価格 | 向いている用途 | メモ |
 |---|---:|---|---|
-| `suno-v5-beta` | $0.1111 / song | highest quality generations | best overall music quality |
-| `suno-v4.5-beta` | $0.0833 / song | balanced quality and cost | strong default choice |
-| `suno-v4.5plus-beta` | $0.0833 / song | balanced generation with broader compatibility | supports older integrations |
-| `suno-v4.5all-beta` | $0.0833 / song | broad compatibility workflows | legacy naming compatibility |
-| `suno-v4-beta` | $0.0556 / song | lower-cost generation | budget-friendly option |
+| `suno-v5-beta` | $0.1111 / song | 最高品質の生成 | 現時点で最も高品質 |
+| `suno-v4.5-beta` | $0.0833 / song | 品質とコストのバランス | 標準的なおすすめ |
+| `suno-v4.5plus-beta` | $0.0833 / song | 旧統合との互換性 | 移行向け |
+| `suno-v4.5all-beta` | $0.0833 / song | 幅広い互換ワークフロー | legacy naming 向け |
+| `suno-v4-beta` | $0.0556 / song | 低コスト生成 | 予算重視向け |
 
-> Pricing should match the latest Suno product page on EvoLink.ai. If pricing changes, update this table first.
+> 価格は EvoLink.ai の最新 Suno 製品ページと一致している必要があります。pricing が変わった場合は、まずこの表を更新してください。
 
 ## Suno API Models
 
 ### `suno-v5-beta`
-- **Best for:** highest quality song generation
+- **Best for:** 最高品質の楽曲生成
 - **Price:** $0.1111 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** polished demos, creator apps, premium music generation workflows
+- **Quality:** 高い
+- **Speed:** 中程度
+- **Supports vocals:** はい
+- **Supports instrumental:** はい
+- **Ideal use cases:** 高品質なデモ、creator apps、プレミアム音楽生成ワークフロー
 
 ### `suno-v4.5-beta`
-- **Best for:** strong quality-to-cost balance
+- **Best for:** 品質とコストのバランス
 - **Price:** $0.0833 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** most production apps, iteration with good output quality
+- **Quality:** 高い
+- **Speed:** 中程度
+- **Supports vocals:** はい
+- **Supports instrumental:** はい
+- **Ideal use cases:** 多くの本番アプリ、品質を保ちながらコストも重視した生成
 
 ### `suno-v4.5plus-beta`
-- **Best for:** compatibility with older integrations
+- **Best for:** 旧統合との互換性
 - **Price:** $0.0833 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** teams migrating older Suno integrations to EvoLink.ai
+- **Quality:** 高い
+- **Speed:** 中程度
+- **Supports vocals:** はい
+- **Supports instrumental:** はい
+- **Ideal use cases:** 旧 Suno integration を EvoLink.ai に移行するチーム
 
 ### `suno-v4.5all-beta`
-- **Best for:** broad compatibility workflows
+- **Best for:** 広い互換性を必要とするワークフロー
 - **Price:** $0.0833 / song
-- **Quality:** high
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** legacy integration paths and migration scenarios
+- **Quality:** 高い
+- **Speed:** 中程度
+- **Supports vocals:** はい
+- **Supports instrumental:** はい
+- **Ideal use cases:** legacy integration path と移行シナリオ
 
 ### `suno-v4-beta`
-- **Best for:** lower-cost music generation
+- **Best for:** 低コストの音楽生成
 - **Price:** $0.0556 / song
-- **Quality:** medium
-- **Speed:** medium
-- **Supports vocals:** yes
-- **Supports instrumental:** yes
-- **Ideal use cases:** prototyping, budget-sensitive apps, batch generation experiments
+- **Quality:** 中程度
+- **Speed:** 中程度
+- **Supports vocals:** はい
+- **Supports instrumental:** はい
+- **Ideal use cases:** プロトタイピング、予算重視のアプリ、バッチ実験
 
 ## Suno API Model Comparison
 
-Use this comparison table to choose the best Suno API model for your app.
+この比較表を使って、あなたのアプリに最適な Suno API model を選んでください。
 
-| If you need... | Recommended Model | Why |
+| 必要なもの | 推奨 Model | 理由 |
 |---|---|---|
-| the best music quality | `suno-v5-beta` | highest-end model in the current lineup |
-| the best balance of quality and price | `suno-v4.5-beta` | strong default choice for most apps |
-| the lowest Suno API cost | `suno-v4-beta` | cheaper per-song pricing |
-| compatibility with older integrations | `suno-v4.5plus-beta` / `suno-v4.5all-beta` | smoother migration path |
-| a safe default for production | `suno-v4.5-beta` | good mix of quality, cost, and compatibility |
+| 最高の音楽品質 | `suno-v5-beta` | 現在のラインアップで最上位 |
+| 品質と価格の最良バランス | `suno-v4.5-beta` | 多くのアプリに適した強い標準選択 |
+| 最低コストの Suno API | `suno-v4-beta` | song あたりの価格が低い |
+| 旧統合との互換性 | `suno-v4.5plus-beta` / `suno-v4.5all-beta` | 移行がよりスムーズ |
+| 本番向けの安全な標準選択 | `suno-v4.5-beta` | 品質、コスト、互換性のバランスが良い |
 
-## How to Use Suno API
+## Suno API の使い方
 
-Using Suno API usually involves four steps:
+Suno API の利用は通常 4 ステップです。
 
-1. Get an API key from EvoLink.ai
-2. Choose the right Suno API model
-3. Send a generation request to `POST /v1/audios/generations`
-4. Poll task status from `GET /v1/tasks/{task_id}` until the result is ready
+1. EvoLink.ai で API key を取得する
+2. 適切な Suno API model を選ぶ
+3. `POST /v1/audios/generations` に生成リクエストを送る
+4. `GET /v1/tasks/{task_id}` で結果が準備できるまで task status を確認する
 
-Suno music generation is asynchronous. The create request returns a task ID, and you fetch the completed audio result afterward.
+Suno music generation は非同期です。create request はまず task ID を返し、その後に完成した音声結果を取得します。
 
-## Request Modes
+## リクエストモード
 
 ### Simple mode
-Use simple mode when you want the model to generate the song structure automatically.
+曲の構成をモデルに自動生成させたい場合は simple mode を使います。
 
 ```json
 {
@@ -141,7 +139,7 @@ Use simple mode when you want the model to generate the song structure automatic
 ```
 
 ### Custom mode
-Use custom mode when you want more control over title, style, lyrics, or instrumental output.
+title、style、lyrics、instrumental output を細かく制御したい場合は custom mode を使います。
 
 ```json
 {
@@ -155,7 +153,7 @@ Use custom mode when you want more control over title, style, lyrics, or instrum
 ```
 
 ### Instrumental generation
-If you want instrumental output, set `instrumental` to `true`.
+instrumental 出力が必要な場合は `instrumental` を `true` に設定します。
 
 ```json
 {
@@ -167,9 +165,9 @@ If you want instrumental output, set `instrumental` to `true`.
 }
 ```
 
-## Task Workflow
+## タスクフロー
 
-### 1. Create a generation task
+### 1. 生成タスクを作成する
 
 ```bash
 curl --request POST \
@@ -182,7 +180,7 @@ curl --request POST \
   }'
 ```
 
-Example response:
+レスポンス例：
 
 ```json
 {
@@ -196,7 +194,7 @@ Example response:
 }
 ```
 
-### 2. Query task status
+### 2. タスク状態を確認する
 
 ```bash
 curl --request GET \
@@ -204,7 +202,7 @@ curl --request GET \
   --header 'Authorization: Bearer YOUR_API_KEY'
 ```
 
-Example completed response:
+完了時のレスポンス例：
 
 ```json
 {
@@ -228,24 +226,24 @@ Example completed response:
 }
 ```
 
-## Important Parameters
+## 重要なパラメータ
 
-| Parameter | Type | What it does |
+| パラメータ | 型 | 役割 |
 |---|---|---|
-| `model` | string | selects the Suno API model |
-| `prompt` | string | prompt or lyrics input |
-| `custom_mode` | boolean | enables fine-grained control |
-| `instrumental` | boolean | generates instrumental-only output |
-| `title` | string | song title in custom mode |
-| `style` | string | style or genre guidance |
-| `negative_tags` | string | styles or qualities to avoid |
-| `persona_id` | string | reuses a previously created Suno persona |
+| `model` | string | Suno API model を選択する |
+| `prompt` | string | prompt または lyrics 入力 |
+| `custom_mode` | boolean | 詳細制御を有効にする |
+| `instrumental` | boolean | instrumental のみを生成する |
+| `title` | string | custom mode での曲タイトル |
+| `style` | string | スタイルやジャンルのガイド |
+| `negative_tags` | string | 避けたいスタイルや特徴 |
+| `persona_id` | string | 以前作成した Suno persona を再利用する |
 
-## Model Name Compatibility
+## Model 名の互換性
 
-Older model names are still supported and mapped automatically to beta variants.
+古い model 名も引き続き使用可能で、自動的に対応する beta 版へマッピングされます。
 
-| Older Name | Current Compatible Variant |
+| 旧名称 | 現在の互換バリアント |
 |---|---|
 | `suno-v5` | `suno-v5-beta` |
 | `suno-v4.5` | `suno-v4.5-beta` |
@@ -253,7 +251,7 @@ Older model names are still supported and mapped automatically to beta variants.
 | `suno-v4.5all` | `suno-v4.5all-beta` |
 | `suno-v4` | `suno-v4-beta` |
 
-## More Suno API Examples by Language
+## 言語別の Suno API サンプル
 
 - [Python Example](#suno-api-example-in-python)
 - [JavaScript Example](#suno-api-example-in-javascript)
@@ -360,9 +358,9 @@ func main() {
 }
 ```
 
-## Best Prompts for Suno API
+## Suno API のための良い Prompt
 
-For better Suno API output, prompts should describe:
+より良い Suno API の出力を得るには、prompt に以下を含めると効果的です。
 
 - genre
 - mood
@@ -371,48 +369,48 @@ For better Suno API output, prompts should describe:
 - tempo
 - production feel
 
-Example prompt:
+prompt の例：
 
 ```text
 A dreamy indie pop song with soft female vocals, warm analog synths, gentle drums, and an emotional cinematic chorus
 ```
 
-If you are writing lyrics, structure them with tags like `[Verse]`, `[Chorus]`, and `[Bridge]`.
+lyrics を書く場合は、`[Verse]`、`[Chorus]`、`[Bridge]` のようなタグで構造を整理してください。
 
-## Common Use Cases
+## よくあるユースケース
 
-Suno API can be used for:
+Suno API は次の用途に利用できます。
 
-- AI music apps
+- AI 音楽アプリ
 - creator tools
 - lyric-to-song workflows
-- social video background music
-- game prototypes
-- podcast intros and outros
-- branded content generation
-- AI content automation pipelines
+- ソーシャル動画の背景音楽
+- ゲームのプロトタイプ
+- ポッドキャストのイントロ / アウトロ
+- ブランド向けコンテンツ生成
+- AI コンテンツ自動化パイプライン
 
 ## FAQ
 
-### What is Suno API?
-Suno API is an AI music generation API for creating songs, vocals, and instrumentals from prompts or lyrics.
+### Suno API とは何ですか？
+Suno API は、prompt や lyrics から楽曲、ボーカル、instrumental を生成できる AI 音楽生成 API です。
 
-### How much does Suno API cost?
-Current Suno API pricing on EvoLink.ai ranges from $0.0556 to $0.1111 per song depending on the model.
+### Suno API の料金はいくらですか？
+現在の EvoLink.ai 上の Suno API pricing は、model に応じて 1 song あたり $0.0556 から $0.1111 です。
 
-### Which Suno API model is best?
-If you want the highest quality, use `suno-v5-beta`. If you want better cost efficiency, use `suno-v4.5-beta` or `suno-v4-beta`.
+### どの Suno API model が最適ですか？
+最高品質を求めるなら `suno-v5-beta` を使ってください。コスト効率を重視するなら `suno-v4.5-beta` または `suno-v4-beta` が適しています。
 
-### Is Suno API synchronous?
-No. Suno API generation is asynchronous. You create a task first, then query task status via `GET /v1/tasks/{task_id}`.
+### Suno API は同期ですか？
+いいえ。Suno API の生成は非同期です。まず task を作成し、その後 `GET /v1/tasks/{task_id}` で状態を確認します。
 
-### Can I generate instrumental music with Suno API?
-Yes. Set `instrumental` to `true`, typically in `custom_mode`.
+### Suno API で instrumental music は生成できますか？
+はい。`instrumental` を `true` に設定してください。通常は `custom_mode` と一緒に使います。
 
-### Can I use lyrics with Suno API?
-Yes. In custom mode, the `prompt` field can be used as lyrics input.
+### Suno API で lyrics を使えますか？
+はい。custom mode では `prompt` フィールドを lyrics 入力として使えます。
 
-## Related Links
+## 関連リンク
 
 - [Suno API Pricing](https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
 - [Get API Key](https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
