@@ -18,9 +18,15 @@
   <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Read Suno API docs</a>
 </p>
 
-## Quick Start: One-Line Suno API Integration
+## EvoLink Quick Start
 
 Use Suno API in one API call.
+
+- [Open the Suno model page](https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
+- [Read Suno API docs](https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
+- [Get your EvoLink API key](https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
+- [Install the EvoLink Media MCP server](https://github.com/EvoLinkAI/evolink-media-mcp)
+- [Browse AI video model examples](https://github.com/EvoLinkAI/awesome-ai-video-models-api-guide)
 
 ```bash
 export EVOLINK_API_KEY="your_key_here"
