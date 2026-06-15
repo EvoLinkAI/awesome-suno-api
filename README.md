@@ -12,26 +12,45 @@
   Compare Suno API pricing, choose the right Suno API model, and integrate AI music generation in one API call.
 </p>
 
+<p align="left">
+  <a href="https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">View Suno API pricing</a> ·
+  <a href="https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Get your API key</a> ·
+  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Read Suno API docs</a>
+</p>
+
 ## Quick Start: One-Line Suno API Integration
 
 Use Suno API in one API call.
 
 ```bash
+export EVOLINK_API_KEY="your_key_here"
+
 curl --request POST \
   --url https://api.evolink.ai/v1/audios/generations \
-  --header 'Authorization: Bearer YOUR_API_KEY' \
+  --header "Authorization: Bearer ${EVOLINK_API_KEY}" \
   --header 'Content-Type: application/json' \
   --data '{
     "model": "suno-v5-beta",
+    "custom_mode": false,
+    "instrumental": false,
     "prompt": "A cheerful summer pop song about road trips and freedom"
   }'
 ```
 
-<p align="left">
-  <a href="https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">View Suno API Pricing</a> ·
-  <a href="https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Get API Key</a> ·
-  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation">Read API Docs</a>
-</p>
+## Full First-Run Flow
+
+Suno music generation is asynchronous. A production integration should create a task, store the task ID, poll or receive a callback, and then save the final audio URL.
+
+```bash
+export EVOLINK_API_KEY="your_key_here"
+bash examples/curl/complete-flow.sh
+```
+
+Complete examples:
+
+- [cURL complete flow](./examples/curl/complete-flow.sh)
+- [Python complete flow](./examples/python/complete_flow.py)
+- [JavaScript complete flow](./examples/javascript/complete-flow.mjs)
 
 ## What Is Suno API?
 
@@ -55,8 +74,6 @@ This section explains Suno API pricing and the current cost of each supported mo
 | `suno-v4.5plus-beta` | $0.0833 / song | balanced generation with broader compatibility | supports older integrations |
 | `suno-v4.5all-beta` | $0.0833 / song | broad compatibility workflows | legacy naming compatibility |
 | `suno-v4-beta` | $0.0556 / song | lower-cost generation | budget-friendly option |
-
-> Pricing should match the latest Suno product page on EvoLink.ai. If pricing changes, update this table first.
 
 ## Suno API Models
 
@@ -136,6 +153,8 @@ Use simple mode when you want the model to generate the song structure automatic
 ```json
 {
   "model": "suno-v5-beta",
+  "custom_mode": false,
+  "instrumental": false,
   "prompt": "A cheerful summer pop song about road trips and freedom"
 }
 ```
@@ -174,10 +193,12 @@ If you want instrumental output, set `instrumental` to `true`.
 ```bash
 curl --request POST \
   --url https://api.evolink.ai/v1/audios/generations \
-  --header 'Authorization: Bearer YOUR_API_KEY' \
+  --header "Authorization: Bearer ${EVOLINK_API_KEY}" \
   --header 'Content-Type: application/json' \
   --data '{
     "model": "suno-v5-beta",
+    "custom_mode": false,
+    "instrumental": false,
     "prompt": "A cinematic orchestral song with emotional build-up"
   }'
 ```
@@ -201,7 +222,7 @@ Example response:
 ```bash
 curl --request GET \
   --url https://api.evolink.ai/v1/tasks/task-unified-xxx-yyy \
-  --header 'Authorization: Bearer YOUR_API_KEY'
+  --header "Authorization: Bearer ${EVOLINK_API_KEY}"
 ```
 
 Example completed response:
@@ -228,6 +249,13 @@ Example completed response:
 }
 ```
 
+Detailed lifecycle docs:
+
+- [API Reference](./docs/api-reference.md)
+- [Response Schema](./docs/response-schema.md)
+- [Error Handling](./docs/errors.md)
+- [Callback / Webhook](./docs/callbacks.md)
+
 ## Important Parameters
 
 | Parameter | Type | What it does |
@@ -239,7 +267,12 @@ Example completed response:
 | `title` | string | song title in custom mode |
 | `style` | string | style or genre guidance |
 | `negative_tags` | string | styles or qualities to avoid |
+| `vocal_gender` | string | `m` or `f`; increases probability of requested vocal gender |
+| `style_weight` | number | style adherence weight from `0.0` to `1.0` |
+| `weirdness_constraint` | number | creativity/experimental weight from `0.0` to `1.0` |
+| `audio_weight` | number | audio feature weight from `0.0` to `1.0` |
 | `persona_id` | string | reuses a previously created Suno persona |
+| `persona_model` | string | `style_persona` or V5-only `voice_persona` |
 
 ## Model Name Compatibility
 
@@ -263,11 +296,13 @@ Older model names are still supported and mapped automatically to beta variants.
 ### Suno API Example in Python
 
 ```python
+import os
 import requests
 import time
 
+api_key = os.environ["EVOLINK_API_KEY"]
 headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
+    "Authorization": f"Bearer {api_key}",
     "Content-Type": "application/json"
 }
 
@@ -276,6 +311,8 @@ create_resp = requests.post(
     headers=headers,
     json={
         "model": "suno-v5-beta",
+        "custom_mode": false,
+        "instrumental": false,
         "prompt": "An uplifting electronic pop track with bright melodies"
     }
 ).json()
@@ -285,7 +322,7 @@ task_id = create_resp["id"]
 while True:
     task = requests.get(
         f"https://api.evolink.ai/v1/tasks/{task_id}",
-        headers={"Authorization": "Bearer YOUR_API_KEY"}
+        headers={"Authorization": f"Bearer {api_key}"}
     ).json()
     if task.get("status") == "completed":
         print(task)
@@ -304,6 +341,8 @@ const createResp = await fetch("https://api.evolink.ai/v1/audios/generations", {
   },
   body: JSON.stringify({
     model: "suno-v5-beta",
+    custom_mode: false,
+    instrumental: false,
     prompt: "An uplifting electronic pop track with bright melodies"
   })
 });
@@ -311,6 +350,8 @@ const createResp = await fetch("https://api.evolink.ai/v1/audios/generations", {
 const task = await createResp.json();
 console.log(task);
 ```
+
+For production-ready polling and error handling, use [examples/javascript/complete-flow.mjs](./examples/javascript/complete-flow.mjs).
 
 ### Suno API Example in TypeScript
 
@@ -343,12 +384,18 @@ import (
   "bytes"
   "fmt"
   "net/http"
+  "os"
 )
 
 func main() {
-  body := []byte(`{"model":"suno-v5-beta","prompt":"A dreamy indie pop song with warm synths"}`)
+  apiKey := os.Getenv("EVOLINK_API_KEY")
+  if apiKey == "" {
+    panic("Set EVOLINK_API_KEY first")
+  }
+
+  body := []byte(`{"model":"suno-v5-beta","custom_mode":false,"instrumental":false,"prompt":"A dreamy indie pop song with warm synths"}`)
   req, _ := http.NewRequest("POST", "https://api.evolink.ai/v1/audios/generations", bytes.NewBuffer(body))
-  req.Header.Set("Authorization", "Bearer YOUR_API_KEY")
+  req.Header.Set("Authorization", "Bearer "+apiKey)
   req.Header.Set("Content-Type", "application/json")
 
   resp, err := http.DefaultClient.Do(req)
@@ -415,8 +462,8 @@ Yes. In custom mode, the `prompt` field can be used as lyrics input.
 ## Related Links
 
 - [Suno API Pricing](https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
-- [Get API Key](https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
-- [Official Documentation](https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation)
+- [Get your API key](https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
+- [Read Suno API docs](https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
 
 ## License
 

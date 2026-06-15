@@ -6,6 +6,8 @@ const response = await fetch("https://api.evolink.ai/v1/audios/generations", {
   },
   body: JSON.stringify({
     model: "suno-v5-beta",
+    custom_mode: false,
+    instrumental: false,
     prompt: "An uplifting electronic pop track with bright melodies"
   })
 });

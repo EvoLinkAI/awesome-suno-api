@@ -17,7 +17,7 @@ Suno API’yi tek bir API çağrısıyla kullanın.
 ```bash
 curl --request POST \
   --url https://api.evolink.ai/v1/audios/generations \
-  --header 'Authorization: Bearer YOUR_API_KEY' \
+  --header "Authorization: Bearer ${EVOLINK_API_KEY}" \
   --header 'Content-Type: application/json' \
   --data '{
     "model": "suno-v5-beta",
@@ -28,7 +28,7 @@ curl --request POST \
 <p align="left">
   <a href="https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">Suno API fiyatlarını görüntüle</a> ·
   <a href="https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">API Key al</a> ·
-  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation">API dokümanını oku</a>
+  <a href="https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api">API dokümanını oku</a>
 </p>
 
 ## Suno API nedir?
@@ -172,7 +172,7 @@ Instrumental çıktı istiyorsanız `instrumental` alanını `true` yapın.
 ```bash
 curl --request POST \
   --url https://api.evolink.ai/v1/audios/generations \
-  --header 'Authorization: Bearer YOUR_API_KEY' \
+  --header "Authorization: Bearer ${EVOLINK_API_KEY}" \
   --header 'Content-Type: application/json' \
   --data '{
     "model": "suno-v5-beta",
@@ -199,7 +199,7 @@ curl --request POST \
 ```bash
 curl --request GET \
   --url https://api.evolink.ai/v1/tasks/task-unified-xxx-yyy \
-  --header 'Authorization: Bearer YOUR_API_KEY'
+  --header "Authorization: Bearer ${EVOLINK_API_KEY}"
 ```
 
 Tamamlanmış yanıt örneği:
@@ -261,11 +261,13 @@ Eski model adları hâlâ desteklenir ve otomatik olarak ilgili beta varyantlar�
 ### Suno API Example in Python
 
 ```python
+import os
 import requests
 import time
 
+api_key = os.environ["EVOLINK_API_KEY"]
 headers = {
-    "Authorization": "Bearer YOUR_API_KEY",
+    "Authorization": f"Bearer {api_key}",
     "Content-Type": "application/json"
 }
 
@@ -283,7 +285,7 @@ task_id = create_resp["id"]
 while True:
     task = requests.get(
         f"https://api.evolink.ai/v1/tasks/{task_id}",
-        headers={"Authorization": "Bearer YOUR_API_KEY"}
+        headers={"Authorization": f"Bearer {api_key}"}
     ).json()
     if task.get("status") == "completed":
         print(task)
@@ -341,12 +343,18 @@ import (
   "bytes"
   "fmt"
   "net/http"
+  "os"
 )
 
 func main() {
+  apiKey := os.Getenv("EVOLINK_API_KEY")
+  if apiKey == "" {
+    panic("Set EVOLINK_API_KEY first")
+  }
+
   body := []byte(`{"model":"suno-v5-beta","prompt":"A dreamy indie pop song with warm synths"}`)
   req, _ := http.NewRequest("POST", "https://api.evolink.ai/v1/audios/generations", bytes.NewBuffer(body))
-  req.Header.Set("Authorization", "Bearer YOUR_API_KEY")
+  req.Header.Set("Authorization", "Bearer "+apiKey)
   req.Header.Set("Content-Type", "application/json")
 
   resp, err := http.DefaultClient.Do(req)
@@ -414,7 +422,7 @@ Evet. custom mode içinde `prompt` alanı lyrics girdisi olarak kullanılabilir.
 
 - [Suno API Pricing](https://evolink.ai/suno?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
 - [Get API Key](https://evolink.ai/signup?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
-- [Official Documentation](https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation)
+- [Official Documentation](https://docs.evolink.ai/en/api-manual/audio-series/suno/suno-music-generation?utm_source=github&utm_medium=readme&utm_campaign=awesome-suno-api)
 
 ## License
 
